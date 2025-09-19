@@ -1,0 +1,6 @@
+---
+const { label, href, variant = 'primary' } =Astro.props
+---
+
+<a href={href} class={'text-white px-8 py-2 rounded-md uppercase' + (variant === 'primary' ? ' bg-secondary' : ' bg-primary')} >{label}</button>
+

@@ -1,3 +1,10 @@
+---
+import TopMenu from "../components/TopMenu.astro";
+import "../styles/global.css";
+import { AstroFont } from "astro-font";
+const { title = "Hospital Central de los Altos" } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +12,54 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>
+			{title}
+		</title>
+
+		<AstroFont
+		config={[
+		  {
+			name: "Montserrat",
+			src: [
+			  {
+				style: 'regular',
+				weight: '500',
+				path: 'https://fonts.gstatic.com/s/montserrat/v32/JTUSjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w.woff2'
+			  },
+			  {
+				style: 'bold',
+				weight: '700',
+				path: 'https://fonts.gstatic.com/s/montserrat/v32/JTUSjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w.woff2'
+			  }
+			],
+			preload: true,
+			display: "swap",
+			selector: "body",
+			fallback: "sans-serif",
+		  },
+		  {
+			name: "Baloo 2",
+			src: [
+			  {
+				style: 'regular',
+				weight: '400',
+				path: 'https://fonts.gstatic.com/s/baloobhaijaan2/v1/6NUS8FzMzZ6f4lK5-d4DkYUYoS8.woff2'
+			  },
+			],
+			preload: true,
+			display: "swap",
+			selector: "body",
+			fallback: "sans-serif",
+		  },
+		]}
+	  />
 	</head>
 	<body>
-		<slot />
+		<TopMenu />
+		<main>
+			<slot />
+		  </main>
+		<slot name="footer"/>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+	--font-secondary: "Baloo 2", sans-serif;
+	--font-sans: "Montserrat", sans-serif;
+    --color-primary: #162F39;
+    --color-secondary: #017381;
+    --color-tertiary: #00B0AF;
+}
+
+
+@layer components {
+    .font-base {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 24px;
+      color: var(--color-primary);
+    }
+
+    .font-bold {
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .font-title { 
+        font-family: "Baloo 2",  sans-serif;
+        font-weight: 400;
+        font-size: 4.5rem;
+        line-height: 5.7rem;
+        color: #FFFFFF;
+        text-shadow: 0 6px 6px rgba(0,0,0,.25)
+    }
+  }
