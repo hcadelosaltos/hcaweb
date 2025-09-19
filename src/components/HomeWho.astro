@@ -1,0 +1,23 @@
+---
+import Button from './Button.astro';
+---
+
+<div class="grid grid-cols-12 grid-rows-12 gap-0 container mx-auto -mt-10">
+  <div
+    class="col-start-3 col-end-6 row-start-4 row-end-10 space-y-4 text-center gap-4 flex flex-col items-center justify-center"
+  >
+    <h2 class="font-bold text-4xl">¿Quienes somos?</h2>
+    <p class="font-bold text-xl">
+      Creemos que la salud es la base para que las personas vivan con dignidad y
+      plenitud. Ofrecemos atención médica cercana, confiable y de alta calidad,
+      respaldada por tecnología y un equipo humano comprometido.
+    </p>
+    <Button href="/" label="Contactanos" />
+  </div>
+
+  <div
+    class="col-start-6 col-end-13 row-start-1 row-end-13 flex justify-center"
+  >
+    <img src="/src/assets/image1.png" alt="" class="w-full object-contain" />
+  </div>
+</div>

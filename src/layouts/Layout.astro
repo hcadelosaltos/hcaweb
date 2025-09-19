@@ -22,6 +22,11 @@ const { title = 'Hospital Central de los Altos' } = Astro.props;
           name: 'Montserrat',
           src: [
             {
+              style: 'light',
+              weight: '300',
+              path: 'https://fonts.gstatic.com/s/montserrat/v32/JTUSjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w.woff2',
+            },
+            {
               style: 'regular',
               weight: '500',
               path: 'https://fonts.gstatic.com/s/montserrat/v32/JTUSjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w.woff2',
@@ -56,7 +61,7 @@ const { title = 'Hospital Central de los Altos' } = Astro.props;
   </head>
   <body>
     <TopMenu />
-    <main>
+    <main class="font-base">
       <slot />
     </main>
     <slot name="footer" />

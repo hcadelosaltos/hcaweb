@@ -9,6 +9,11 @@
 }
 
 @layer components {
+  .font-light {
+    font-family: var(--font-sans);
+    font-weight: 300;
+  }
+
   .font-base {
     font-family: var(--font-sans);
     font-weight: 500;
@@ -25,7 +30,7 @@
   }
 
   .font-title {
-    font-family: 'Baloo 2', sans-serif;
+    font-family: var(--font-secondary);
     font-weight: 400;
     font-size: 4.5rem;
     line-height: 5.7rem;
