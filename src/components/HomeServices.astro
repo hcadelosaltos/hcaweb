@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
 import HomeServiceCard from './HomeServiceCard.astro';
 import { homeServices } from '../data/homeServices';
 ---
@@ -10,7 +12,7 @@ import { homeServices } from '../data/homeServices';
     <div
       class="container mx-auto flex flex-col items-center justify-center gap-10"
     >
-      <img src="/src/assets/logo.png" alt="" />
+      <Image src={logo} alt="Logo de la empresa" />
       <p class="font-bold text-xl max-w-[50ch] text-center">
         Creemos que nadie debería estar limitado por su salud cuando tiene tanto
         por aportar al mundo. Por eso, ofrecemos atención médica integrada,

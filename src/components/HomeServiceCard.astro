@@ -1,5 +1,6 @@
 ---
 import Button from './Button.astro';
+import { Image } from 'astro:assets';
 
 const { title, description, image, label, href, alt } = Astro.props;
 ---
@@ -7,7 +8,7 @@ const { title, description, image, label, href, alt } = Astro.props;
 <div
   class="bg-white shadow-xl p-10 flex flex-col items-center justify-center gap-3 rounded-xl text-center min-h-[450px] flex-1"
 >
-  <img src={image} alt={alt} class="w-48" />
+  <Image src={image} alt="" inferSize />
   <p class="text-xl font-bold">{title}</p>
   <p>{description}</p>
   <Button href={href} label={label} />

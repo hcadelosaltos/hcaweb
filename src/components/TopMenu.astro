@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import { mainNav } from '../data/nav';
 const currentPath = Astro.url.pathname;
+import logo from '../assets/logo.svg';
 ---
 
 <div
   class="bg-primary container mx-auto flex items-center justify-between py-5 px-10 rounded-full absolute left-0 right-0 top-10"
 >
-  <a href="/"><img src="/src/assets/logo.svg" alt="logo" class="h-25" /></a>
+  <a href="/"><Image src={logo} alt="Logotipo" width="250" /></a>
   <ul class="flex items-center justify-between gap-10">
     {
       mainNav.map((item) => {
