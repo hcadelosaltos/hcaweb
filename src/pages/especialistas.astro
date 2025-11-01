@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import especialistas from '../assets/especialistas.png';
+import Button from '../components/Button.astro';
+import check from '../assets/check.png';
+
+const benefits = [
+  {
+    description: 'Consultorios en renta a precios accesibles',
+  },
+  {
+    description: 'Excelente ubicación',
+  },
+  {
+    description: 'Apoyo en promoción digital y citas',
+  },
+  {
+    description: 'Infraestructura en expansión',
+  },
+];
+---
+
+<Layout>
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 py-40 container mx-auto items-center"
+  >
+    <Image src={especialistas} alt="Especialistas" width={500} height={500} />
+    <div class="flex gap-8 flex-col">
+      <h1 class="text-secondary font-title text-6xl">
+        Especialistas y Doctores
+      </h1>
+      <div>
+        <p class="text-5xl font-light">¿Eres Médico?</p>
+        <p class="font-bold text-3xl">Este espacio puede ser para ti</p>
+      </div>
+      <div>
+        <Button label="¡QUIERO SER PARTE!" href="/contacto" />
+      </div>
+    </div>
+  </section>
+  <section class="container mx-auto flex flex-col gap-8">
+    <h2 class="font-bold text-5xl text-center">
+      Sé parte del Hospital Central
+    </h2>
+    <h2 class="font-light text-5xl text-center">DE LOS ALTOS</h2>
+    <p class="text-center max-w-[60ch] mx-auto font-bold">
+      Estamos construyendo una comunidad médica sólida, ética y profesional. Si
+      estás buscando un lugar para ejercer tu práctica con infraestructura
+      confiable, este es el momento:
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 p-16 gap-8">
+      {
+        benefits.map((benefit) => {
+          return (
+            <div class="flex flex-col items-center gap-2">
+              <Image src={check} alt="check" />
+              <div class="w-[350px] shadow-xl/25 bg-[#F5F5F5] p-2">
+                <p class="text-center font-bold">{benefit.description}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="flex items-center mx-auto mb-10">
+      <Button
+        label="Solicita Información"
+        variant="secondary"
+        href="/contacto"
+      />
+    </div>
+  </section>
+</Layout>

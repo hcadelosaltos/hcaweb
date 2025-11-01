@@ -1,18 +1,16 @@
 ---
-import { Image } from 'astro:assets';
-import TopMenu from '../components/TopMenu.astro';
 import Layout from '../layouts/Layout.astro';
-import iso from '../assets/iso.png';
 import ServicesWhat from '../components/ServicesWhat.astro';
 import ServicesCurrent from '../components/ServicesCurrent.astro';
+import ServicesNext from '../components/ServicesNext.astro';
 ---
 
 <Layout>
-  <TopMenu />
   <div
-    class="bg-[url(/src/assets/serviceshero.png)] bg-no-repeat bg-center bg-cover h-[100vh]"
+    class="bg-[url(/src/assets/serviceshero.png)] bg-no-repeat bg-top bg-cover h-[70vh]"
   >
   </div>
   <ServicesWhat />
   <ServicesCurrent />
+  <ServicesNext />
 </Layout>
