@@ -39,4 +39,16 @@
   .container {
     max-width: 1244px;
   }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+
+  .border-tertiary {
+    border-color: var(--color-tertiary);
+  }
 }

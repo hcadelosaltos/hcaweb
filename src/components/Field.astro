@@ -1,0 +1,26 @@
+---
+const { label, placeholder, type = 'text', name } = Astro.props;
+---
+
+<fieldset class="flex flex-col gap-2">
+  <label>{label}</label>
+  {
+    type === 'textarea' ? (
+      <textarea
+        name={name}
+        placeholder={placeholder}
+        maxlength={200}
+        rows="4"
+        class="border border-black/25 rounded-lg p-1 px-3 text-black/50"
+      />
+    ) : (
+      <input
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        maxlength={type === 'tel' ? 10 : 200}
+        class="border border-black/25 rounded-lg p-1 px-3 text-black/50"
+      />
+    )
+  }
+</fieldset>

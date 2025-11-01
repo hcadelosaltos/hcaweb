@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logo from '../assets/logo.png';
+import { Image } from 'astro:assets';
+import Field from '../components/Field.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout>
+  <section
+    class="container mx-auto md:pt-60 flex flex-col items-center justify-center gap-8"
+  >
+    <Image src={logo} alt="Logo" width={500} />
+    <h1 class="text-4xl font-bold">Cuéntanos, ¿Cómo podemos ayudarte?</h1>
+
+    <div
+      class="border-2 border-tertiary rounded-xl p-20 w-3xl flex flex-col gap-4"
+    >
+      <Field
+        label="Nombre completo"
+        placeholder="Tu nombre completo"
+        name="name"
+      />
+      <Field
+        label="Teléfono"
+        placeholder="(123) 456 7890"
+        name="phone"
+        type="tel"
+      />
+      <Field
+        label="Correo electrónico"
+        placeholder="some@mail.com"
+        name="email"
+        type="email"
+      />
+      <Field
+        label="¿Cómo podemos ayudarte?"
+        placeholder="Estamos para ayudarte"
+        name="help"
+        type="textarea"
+      />
+    </div>
+    <div class="mx-auto mb-10">
+      <Button label="Enviar" />
+    </div>
+  </section>
+</Layout>
